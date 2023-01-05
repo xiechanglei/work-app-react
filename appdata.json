@@ -1,0 +1,12 @@
+{
+	"include": "dist",
+	"output": "./release/my-app.apk",
+	"appinfo": {
+		"package": "com.xiechanglei.code",
+		"appname": "work",
+		"color": "#65ce9d",
+		"versionCode": 1,
+		"versionName": "1.0",
+		"icon": "res/icon.png"
+	}
+}
