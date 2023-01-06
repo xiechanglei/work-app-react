@@ -1,8 +1,6 @@
 /* @import url("./animate.css");  */
 body {
   height: 100vh;
-  background-color: #65ce9d;
-  color: #ffffff;
   font-size: calc(100vw / 750 * 10);
   margin: 0;
   padding: 0;

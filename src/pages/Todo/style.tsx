@@ -1,5 +1,5 @@
 import styled from 'styled-px2vw'
-
+import { activeColor } from '@/constans/theme'
 
 export const SvgWraper = styled.div`
     position: relative;
@@ -59,7 +59,7 @@ export const TodoListWraper = styled.div`
 export const TodoItemWraper = styled.div`
     display: flex;
     background: #ffffff;
-    color: #65ce9d;
+    color: ${activeColor};
     padding: 30px;
     border-radius: 10px;
     margin-top: 30px;
@@ -95,11 +95,12 @@ export const TodoItemWraper = styled.div`
   
     &.done {
         color: #aaaaaa;
+        text-decoration: line-through;
         background-color: rgba(255, 255, 255, 0.6);
     }
   
     &.done .todo-process {
-        color: #65ce9d;
+        color: ${activeColor};
     }
 `
 
@@ -111,3 +112,9 @@ export const TodoFooter = styled.div`
     align-items: center;
 `
 
+export const AddTodoFormWraper = styled.div`
+    width: 600px;
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 10px;
+`
