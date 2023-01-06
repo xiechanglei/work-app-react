@@ -9,17 +9,17 @@ import { FixedModelContainer } from '@/global-component/Container'
 //页面组件
 export const Todo = () => {
     const [action, setAction] = useState('todo')
-    const addTodo = () => {
-        alert(1)
-    }
+    const [addTodoFormVisible, setAddTodoFormVisible] = useState(false)
+    const addTodo = () => setAddTodoFormVisible(true)
     return <TodoWrapper>
         <TodoContent>
             <CurrentTimeBlock onAdd={addTodo} />
             <TodoList />
         </TodoContent>
         <FooterBlock action={action} actionClick={ac => setAction(ac)} />
-        <FixedModelContainer>
+        {addTodoFormVisible && <FixedModelContainer>
             <AddTodoForm></AddTodoForm>
-        </FixedModelContainer>
+        </FixedModelContainer>}
+
     </TodoWrapper >
 }   

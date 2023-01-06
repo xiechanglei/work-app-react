@@ -1,5 +1,5 @@
 import styled from 'styled-px2vw'
-import { activeColor } from '@/constans/theme'
+import { activeColor, frontColor } from '@/constans/theme'
 
 export const SvgWraper = styled.div`
     position: relative;
@@ -11,13 +11,6 @@ export const SvgWraper = styled.div`
         transform: translateX(-50%);
         bottom: -1rem;
     }
-`
-export const SvgIcon = styled.svg`
-    width: 70px;
-    height: 70px;
-    vertical-align: middle;
-    fill: currentColor;
-    overflow: hidden;
 `
 
 export const TodoWrapper = styled.div`
@@ -50,6 +43,10 @@ export const CurrentTime = styled.div`
         right: 30px;
         bottom: 50px;
     }
+    & .add-btn .svg-icon{
+        width: 70px;
+        height: 70px;
+    }
 `
 export const TodoListWraper = styled.div`
     flex-grow: 1;
@@ -58,7 +55,7 @@ export const TodoListWraper = styled.div`
 
 export const TodoItemWraper = styled.div`
     display: flex;
-    background: #ffffff;
+    background: ${frontColor};
     color: ${activeColor};
     padding: 30px;
     border-radius: 10px;
@@ -110,11 +107,36 @@ export const TodoFooter = styled.div`
     height: 120px;
     justify-content: space-around;
     align-items: center;
+    & .svg-icon{
+        width: 70px;
+        height: 70px;
+    }
 `
 
 export const AddTodoFormWraper = styled.div`
     width: 600px;
     padding: 30px;
-    background-color: #fff;
+    background-color: ${frontColor};
+    color: ${activeColor};
     border-radius: 10px;
+    & .input-item {
+        display: flex;
+        align-items: center;
+        margin-bottom: 30px;
+    }
+    & .input-item span{
+        font-size: 30px;
+        margin-right: 20px;
+    }
+    & .input-item .input-value {
+        font-size: 30px;
+        flex-grow: 1;
+        display: flex;
+        align-items: center;
+    }
+    & .input-item .input-value .svg-icon{
+        width: 40px;
+        height: 40px;
+        color: #ccc;
+    }
 `

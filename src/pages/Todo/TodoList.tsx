@@ -1,7 +1,7 @@
 
 import { FC, useState } from 'react'
-import { NeedDoneIcon, DoneIcon } from '@/svg-icons/SvgIcons'
-import { SvgIcon, TodoListWraper, TodoItemWraper } from './style'
+import { NeedDoneIcon, DoneIcon, SvgIcon } from '@/svg-icons/SvgIcons'
+import { TodoListWraper, TodoItemWraper } from './style'
 import { getTodayTodoList, saveTodoDid, TodoItemInfo } from './data'
 
 
@@ -12,7 +12,7 @@ const TodoItem: FC<{ item: TodoItemInfo, toggleDOne: (id: string) => void }> = (
             <div className="todo-time">{item.time}</div>
         </div>
         <div className="todo-process">
-            <SvgIcon viewBox="0 0 1024 1024">
+            <SvgIcon>
                 {item.isDone ? <DoneIcon /> : <NeedDoneIcon />}
             </SvgIcon >
         </div >

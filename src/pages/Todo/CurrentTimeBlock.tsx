@@ -1,6 +1,6 @@
 import { FC, useEffect, useState } from 'react'
-import { PlusIcon } from '@/svg-icons/SvgIcons'
-import { SvgIcon, CurrentTime } from './style'
+import { SvgIcon, PlusIcon } from '@/svg-icons/SvgIcons'
+import { CurrentTime } from './style'
 import { getMonthName } from '@/libs/time'
 
 export const CurrentTimeBlock: FC<{ onAdd: () => void }> = ({ onAdd }) => {
@@ -26,7 +26,7 @@ export const CurrentTimeBlock: FC<{ onAdd: () => void }> = ({ onAdd }) => {
         <span className="date">{time.day}</span>
         <span className="month">/{time.month}</span>
         <div className="add-btn">
-            <SvgIcon viewBox="0 0 1024 1024" onClick={onAdd}>
+            <SvgIcon onClick={onAdd}>
                 <PlusIcon />
             </SvgIcon>
         </div>
