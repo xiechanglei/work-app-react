@@ -5,6 +5,7 @@ import "@/global-style/style.tsx"
 import { activeColor, frontColor } from './constans/theme'
 //pages
 import { Todo } from './pages/Todo'
+import { Daka } from './pages/Daka'
 
 const root = document.getElementById('root') as HTMLElement
 root.style.backgroundColor = activeColor
@@ -15,6 +16,7 @@ ReactDOM.createRoot(root).render(
     <HashRouter>
       <Routes>
         <Route path="/" element={<Todo />} />
+        <Route path="/daka" element={<Daka />} />
       </Routes>
     </HashRouter>
   </React.StrictMode>,
